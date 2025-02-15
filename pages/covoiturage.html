@@ -1,0 +1,87 @@
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1>Covoiturage</h1>
+    </div>
+</div>
+
+<form class="row g-3">
+    <!-- Champ de départ -->
+    <div class="col-md-4">
+        <label for="depart" class="form-label">Départ</label>
+        <input type="text" class="form-control" id="depart" placeholder="Ville de départ">
+    </div>
+
+    <!-- Champ d'arrivée -->
+    <div class="col-md-4">
+        <label for="arrivee" class="form-label">Arrivée</label>
+        <input type="text" class="form-control" id="arrivee" placeholder="Ville d'arrivée">
+    </div>
+
+    <!-- Sélecteur de date -->
+    <div class="col-md-4">
+        <label for="date" class="form-label">Date du voyage</label>
+        <input type="date" class="form-control" id="date">
+    </div>
+
+    <!-- Bouton de recherche -->
+    <div class="col-12 text-center mt-3">
+        <button type="submit" class="btn btn-primary">Rechercher</button>
+    </div>
+
+    <!-- Filtre de recherche -->
+    <input type="hidden" name="eco" value>
+    <input type="hidden" name="prix" value>
+    <input type="hidden" name="duree" value>
+    <input type="hidden" name="note" value>
+
+</form>
+
+<!-- Bouton pour afficher/masquer les filtres -->
+<div class="text-center my-3">
+    <button class="btn btn-primary" id="toggleFilters">Afficher les filtres</button>
+</div>
+
+<!-- Section des filtres (cachée par défaut) -->
+<div id="filtersSection" class="card p-3" style="display: none;">
+    <form class="row g-3">
+        <!-- Aspect écologique -->
+        <div class="col-md-3">
+            <label for="ecologique" class="form-label">Écologique</label>
+            <select class="form-select" id="ecologique">
+                <option value="">Peu importe</option>
+                <option value="oui">Oui</option>
+                <option value="non">Non</option>
+            </select>
+        </div>
+
+        <!-- Prix maximum -->
+        <div class="col-md-3">
+            <label for="prixMax" class="form-label">Prix max (€)</label>
+            <input type="number" class="form-control" id="prixMax" placeholder="Ex: 30">
+        </div>
+
+        <!-- Durée maximum du voyage -->
+        <div class="col-md-3">
+            <label for="dureeMax" class="form-label">Durée max (heures)</label>
+            <input type="number" class="form-control" id="dureeMax" placeholder="Ex: 5">
+        </div>
+
+        <!-- Note minimale -->
+        <div class="col-md-3">
+            <label for="noteMin" class="form-label">Note minimale</label>
+            <select class="form-select" id="noteMin">
+                <option value="">Peu importe</option>
+                <option value="1">⭐ 1+</option>
+                <option value="2">⭐⭐ 2+</option>
+                <option value="3">⭐⭐⭐ 3+</option>
+                <option value="4">⭐⭐⭐⭐ 4+</option>
+                <option value="5">⭐⭐⭐⭐⭐ 5</option>
+            </select>
+        </div>
+
+        <!-- Bouton Appliquer les filtres -->
+        <div class="col-12 text-center mt-3">
+            <button type="submit" class="btn btn-success">Appliquer les filtres</button>
+        </div>
+    </form>
+</div>
